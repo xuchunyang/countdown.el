@@ -3,6 +3,7 @@
 ;; Copyright (C) 2019  Xu Chunyang
 
 ;; Author: Xu Chunyang <mail@xuchunyang.me>
+;; Homepage: https://github.com/xuchunyang/countdown.el
 ;; Keywords: tools
 
 ;; This program is free software; you can redistribute it and/or modify
