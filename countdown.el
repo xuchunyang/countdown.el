@@ -102,6 +102,7 @@
       (erase-buffer)
       (countdown--insert (countdown--format-seconds i))
       (sit-for 1))
+    (setq cursor-type t)
     (message "Countdown done!")))
 
 (provide 'countdown)
