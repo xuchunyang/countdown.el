@@ -85,7 +85,8 @@
     (mapconcat
      (lambda (n)
        (format "%02d" n))
-     (seq-drop-while #'zerop (list hours minutes seconds))
+     (append (seq-drop-while #'zerop (list hours minutes))
+             (list seconds))
      ":")))
 
 ;;;###autoload
