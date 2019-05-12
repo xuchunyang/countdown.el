@@ -4,6 +4,7 @@
 
 ;; Author: Xu Chunyang <mail@xuchunyang.me>
 ;; Homepage: https://github.com/xuchunyang/countdown.el
+;; Requires: ((emacs "25.1") (stream "2.2.4"))
 ;; Keywords: tools
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,6 +25,9 @@
 ;; countdown.el is inspired by countty (https://uninformativ.de/git/countty)
 
 ;;; Code:
+
+(require 'seq)
+(require 'stream)
 
 (defconst countdown--font
   '((?0 #x3C #x42 #x42 #x00 #x42 #x42 #x3C)
