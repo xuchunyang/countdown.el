@@ -48,12 +48,6 @@
 (defconst countdown--masks
   '(#b10000000 #b1000000 #b100000 #b10000 #b1000 #b100 #b10 #b1))
 
-(defconst countdown--chars
-  (mapcar
-   (lambda (char)
-     (cons char (countdown--render-char char)))
-   (mapcar #'car countdown--font)))
-
 (defun countdown--render-char (char)
   (mapcar
    (lambda (n)
@@ -64,6 +58,12 @@
           (propertize " " 'face '(:background "white"))))
       countdown--masks ""))
    (alist-get char countdown--font)))
+
+(defconst countdown--chars
+  (mapcar
+   (lambda (char)
+     (cons char (countdown--render-char char)))
+   (mapcar #'car countdown--font)))
 
 (defun countdown--render-string (string)
   (apply #'seq-mapn
