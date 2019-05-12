@@ -97,13 +97,13 @@
     (setq cursor-type nil)
     (buffer-disable-undo)
     (seq-doseq (i (if (> seconds 0)
-                      (stream-range seconds 0 -1)
+                      (stream-range seconds -1 -1)
                     (stream-range 0)))
       (erase-buffer)
       (countdown--insert (countdown--format-seconds i))
       (sit-for 1))
     (setq cursor-type t)
-    (message "Countdown done!")))
+    (message "Countdown finished!")))
 
 (provide 'countdown)
 ;;; countdown.el ends here
