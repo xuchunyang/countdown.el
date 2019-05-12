@@ -93,7 +93,7 @@
 (defun countdown (seconds)
   (interactive (list (read-number "Countdown Seconds: ")))
   (with-current-buffer (get-buffer-create "*Countdown*")
-    (display-buffer (current-buffer))
+    (switch-to-buffer (current-buffer))
     (setq cursor-type nil)
     (buffer-disable-undo)
     (seq-doseq (i (if (> seconds 0)
