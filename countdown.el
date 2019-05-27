@@ -1,4 +1,4 @@
-;;; countdown.el --- 10, 9, 8, 7, 6...  -*- lexical-binding: t; -*-
+;;; countdown.el --- Countdown using big LCD-like digits -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Xu Chunyang
 
