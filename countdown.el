@@ -97,6 +97,7 @@
 
 ;;;###autoload
 (defun countdown (seconds)
+  "Countdown SECONDS."
   (interactive (list (read-number "Countdown Seconds: ")))
   (with-current-buffer (get-buffer-create "*Countdown*")
     (switch-to-buffer (current-buffer))
