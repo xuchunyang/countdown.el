@@ -49,6 +49,10 @@
 (defconst countdown--masks
   '(#b10000000 #b1000000 #b100000 #b10000 #b1000 #b100 #b10 #b1))
 
+(defconst countdown-char (or "█"
+                             (propertize " " 'face '(:background "white")))
+  "One character string for outlining the countdown.")
+
 (defun countdown--render-char (char)
   (mapcar
    (lambda (n)
@@ -56,7 +60,7 @@
       (lambda (mask)
         (if (zerop (logand n mask))
             " "
-          (propertize " " 'face '(:background "white"))))
+          countdown-char))
       countdown--masks ""))
    (alist-get char countdown--font)))
 
