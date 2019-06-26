@@ -49,8 +49,8 @@
 (defconst countdown--masks
   '(#b10000000 #b1000000 #b100000 #b10000 #b1000 #b100 #b10 #b1))
 
-(defconst countdown-char (or "█"
-                             (propertize " " 'face '(:background "white")))
+(defvar countdown-char (or "█"
+                           (propertize " " 'face '(:background "white")))
   "One character string for outlining the countdown.")
 
 (defun countdown--render-char (char)
